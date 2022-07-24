@@ -5,8 +5,13 @@ export type homeCardType = {
 
 export const homeCard: homeCardType[] = [
 
-    { key: 'sort', label: 'Algorithme de tri' },
-    { key: 'graph', label: 'Théorie des graphes' },
-    { key: 'search', label: 'Algorithme de recherche' }
+    { 
+        key: 'sort', 
+        label: 'Algorithme de tri',
+    },
+    { 
+        key: 'search', 
+        label: 'Algorithme de recherche',
+    },
 
 ]

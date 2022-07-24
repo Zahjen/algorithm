@@ -1,17 +1,22 @@
+import { GestureResponderEvent } from "react-native"
+
 /**
  * Interface composée de :
- * * `item?` *(string)* : Le titre associé à une carte.
+ * * `item?` *(any)* : Le titre associé à une carte.
  * * `cardColor?` *(string)* : La couleur de fond d'une carte.
  * * `arcColor?` *(string)* : La couleur de l'arc de cercle associé à une carte.
+ * * `onPress?` *(((event: GestureResponderEvent) => void) | null | undefined)* : L'action réaliser lors du clique sur une carte.
  */
 export interface CardProps {
 
     /** Le titre associé à une carte. */
-    item?: string,
+    item?: any,
     /** La couleur de fond d'une carte. */
     cardColor?: string,
     /** La couleur de l'arc de cercle associé à une carte. */
-    arcColor?: string
+    arcColor?: string,
+    /** L'action réaliser lors du clique sur une carte */
+    onPress?: ((event: GestureResponderEvent) => void) | null | undefined
 
 }
 

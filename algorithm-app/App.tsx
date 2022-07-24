@@ -1,8 +1,7 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import HomeScreen from './src/page/home/home-screen';
-import { color } from './src/variable/color';
 import { useFonts } from 'expo-font';
+import { NavigationContainer } from '@react-navigation/native';
+import { HomeRouteNavigator } from './src/navigation/home-route-navigaor';
 
 export default function App() {
     // Charger les polices souhaitées à utiliser à travers l'application.
@@ -17,8 +16,8 @@ export default function App() {
     if (!loaded) return null;
 
     return (
-        <SafeAreaView style = {{ backgroundColor: color.bgColor, flex: 1 }}>
-            <HomeScreen/>
-        </SafeAreaView>
+        <NavigationContainer>
+            <HomeRouteNavigator/>
+        </NavigationContainer>
     );
 }
