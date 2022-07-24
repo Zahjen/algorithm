@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView } from 'react-native';
+import HomeScreen from './src/page/home/home-screen';
+import { color } from './src/variable/color';
+import { useFonts } from 'expo-font';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    // Charger les polices souhaitées à utiliser à travers l'application.
+    const [loaded] = useFonts({
+        PoppinsLight: require('./assets/fonts/poppins/Poppins-Light.ttf'),
+        PoppinsLightItalic: require('./assets/fonts/poppins/Poppins-LightItalic.ttf'),
+        PoppinsBold: require('./assets/fonts/poppins/Poppins-SemiBold.ttf'),
+        PoppinsBoldItalic: require('./assets/fonts/poppins/Poppins-SemiBoldItalic.ttf'),
+    });
+    
+    // Si le chargement ne s'est pas fait on ne retourne rien.
+    if (!loaded) return null;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    return (
+        <SafeAreaView style = {{ backgroundColor: color.bgColor, flex: 1 }}>
+            <HomeScreen/>
+        </SafeAreaView>
+    );
+}
