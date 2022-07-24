@@ -3,7 +3,7 @@ import CourseListScreen from "../page/screen/course-list-screen";
 import CourseItem from "../page/screen/couse-item";
 import HomeScreen from "../page/screen/home-screen";
 
-export type HomeRouteNavigatorParams = {
+export type RouteNavigatorParams = {
     Home: undefined,
     CourseListScreen: {
         key: string,
@@ -12,20 +12,20 @@ export type HomeRouteNavigatorParams = {
     CourseItem: undefined
 }
 
-const HomeStack = createNativeStackNavigator<HomeRouteNavigatorParams>();
+const Stack = createNativeStackNavigator<RouteNavigatorParams>();
 
-export const HomeRouteNavigator = () => {
+export const RouteNavigator = () => {
     return (
-        <HomeStack.Navigator>
-            <HomeStack.Group>
-                <HomeStack.Screen 
+        <Stack.Navigator>
+            <Stack.Group>
+                <Stack.Screen 
                     name = "Home" 
                     component = {HomeScreen}
                     options = {{
                         headerShown: false
                     }}/>
 
-                <HomeStack.Screen 
+                <Stack.Screen 
                     name = "CourseListScreen" 
                     component = {CourseListScreen}
                     options = {{
@@ -33,14 +33,14 @@ export const HomeRouteNavigator = () => {
                         headerShown: false
                     }}/>
 
-                <HomeStack.Screen 
+                <Stack.Screen 
                     name = "CourseItem" 
                     component = { CourseItem }
                     options = {{
                         animation: "slide_from_right",
                         headerShown: false
                     }}/>
-            </HomeStack.Group>
-        </HomeStack.Navigator>
+            </Stack.Group>
+        </Stack.Navigator>
     )
 }

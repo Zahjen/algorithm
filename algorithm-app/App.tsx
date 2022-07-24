@@ -1,7 +1,8 @@
 import React from 'react';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
-import { HomeRouteNavigator } from './src/navigation/home-route-navigaor';
+import { RouteNavigator } from './src/navigation/route-navigator';
+import { AppRegistry } from 'react-native';
 
 export default function App() {
     // Charger les polices souhaitées à utiliser à travers l'application.
@@ -17,7 +18,7 @@ export default function App() {
 
     return (
         <NavigationContainer>
-            <HomeRouteNavigator/>
+            <RouteNavigator/>
         </NavigationContainer>
     );
 }

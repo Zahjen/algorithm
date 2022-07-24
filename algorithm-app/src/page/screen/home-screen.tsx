@@ -10,7 +10,9 @@ import { spacer } from "../../variable/spacer";
 import { color } from "../../variable/color";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { HomeRouteNavigatorParams } from "../../navigation/home-route-navigaor";
+import { RouteNavigatorParams } from "../../navigation/route-navigator";
+import { Code } from "../element/code";
+
 
 /**
  * Composant relatif à la page d'acceuil
@@ -18,7 +20,7 @@ import { HomeRouteNavigatorParams } from "../../navigation/home-route-navigaor";
  * @returns Page d'acceuil `HomeScreen`
  */
 const HomeScreen = (): JSX.Element => {
-    const navigation = useNavigation<NativeStackNavigationProp<HomeRouteNavigatorParams>>();
+    const navigation = useNavigation<NativeStackNavigationProp<RouteNavigatorParams>>();
 
     return (
         <SafeAreaView style = {{ backgroundColor: color.bgColor, flex: 1 }}>
@@ -45,6 +47,7 @@ const HomeScreen = (): JSX.Element => {
                         return <Spacer height = { spacer.spaceBtwCard }/>
                     } }
                 />
+                <Code></Code>
             </View>
         </SafeAreaView>
         
