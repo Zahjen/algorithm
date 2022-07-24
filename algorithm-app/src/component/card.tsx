@@ -5,6 +5,7 @@ import Svg, { Circle } from 'react-native-svg';
 import { CardProps } from "../interface/props";
 import { card } from "../style/card";
 import MyText from "./text";
+import { fontSize } from "../variable/font-size";
 
 /**
  * Composant permettant de mettre en placer une petite carte afin d'afficher un topic.
@@ -41,7 +42,8 @@ const Card: React.FC<CardProps> = (props: CardProps): JSX.Element => {
 
             <View style = { card(props.cardColor).textView }>
                 <MyText
-                    text = { props.item?.label.toUpperCase() }
+                    text = { props.item!.label.toUpperCase() }
+                    fontSize = { fontSize.card }
                     textAlign = "right"
                 />
             </View>

@@ -29,8 +29,6 @@ const MyText: React.FC<TextProps> = (props: TextProps): JSX.Element => {
 
 }
 
-
-
 /** Les paramètres par défaut que prendra le composant */
 MyText.defaultProps = {
     

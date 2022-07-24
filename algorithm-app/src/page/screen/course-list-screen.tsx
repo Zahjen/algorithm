@@ -1,6 +1,6 @@
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import React from "react";
-import { SafeAreaView, View, Text, FlatList } from "react-native";
+import { SafeAreaView, View, FlatList } from "react-native";
 import Title from "../../component/title";
 import { HomeRouteNavigatorParams } from "../../navigation/home-route-navigaor";
 import { CourseCard } from "../../ressource/card/courses-card";
@@ -13,9 +13,9 @@ import Card from "../../component/card";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 /**
- * Composant relatif à la page d'acceuil
+ * Composant relatif à la page contenant les titres des différents cours
  * 
- * @returns Page d'acceuil `CourseListScreen`
+ * @returns Page `CourseListScreen`
  */
 const CourseListScreen = (): JSX.Element => {
 

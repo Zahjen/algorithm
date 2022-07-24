@@ -7,7 +7,7 @@ import { pageView } from "../../style/view";
 /**
  * Composant relatif à un cours
  * 
- * @returns Page d'acceuil `CourseItem`
+ * @returns Page `CourseItem`
  */
 const CourseItem = (): JSX.Element => {
 
