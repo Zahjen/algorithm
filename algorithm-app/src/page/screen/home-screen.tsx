@@ -11,7 +11,7 @@ import { color } from "../../variable/color";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RouteNavigatorParams } from "../../navigation/route-navigator";
-import { Code } from "../element/code";
+import Code from "../element/code";
 
 
 /**
@@ -47,7 +47,9 @@ const HomeScreen = (): JSX.Element => {
                         return <Spacer height = { spacer.spaceBtwCard }/>
                     } }
                 />
-                <Code></Code>
+                <Code
+                    text = { 'const var_name: string = "un nom" ;' }
+                ></Code>
             </View>
         </SafeAreaView>
         

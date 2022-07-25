@@ -1,26 +1,36 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
+import { color } from "../../variable/color";
+import { codeBlockView } from "../../style/view";
 
-const keyword = ['if', 'else', 'while', 'for', 'let', 'const', 'case', 'switch', 'default', "return"]
-const keywordSecond = ['string', 'number', 'boolean', 'void', 'undefined']
+const keyword = ['if', 'else', 'while', 'for', 'let', 'const', 'case', 'switch', 'default'];
+const keywordType = ['string', 'number', 'boolean', 'void', 'undefined', 'return'];
+const symbole = ['{', '}', '[', ']', '=', '==', '===', '+', '++', '-', '--', ';', ';','*', '/', '*=', '+=', '-=', '/=', '%', '(', ')'];
 
-export const Code = () => {
-    const codeString = 'const hello: string = if cc else cc \n     coucoiu';
+interface Props {
+    text: string
+}
+
+const Code: React.FC<Props> = (props: Props): JSX.Element => {
+    const texts: string[] = props.text.split(' ');
+    let i: number = 0;
+
     return (
-        <CustomText
-            text = { codeString }
-        />
-    )
+        <View style = { codeBlockView() }>
+            <Text>{
+                texts.map((word: string) => {
+                    i++;
+
+                    if (keyword.includes(word)) return <Text key = { i } style = {{ color: color.codeKeyWord }}>{word} </Text>
+                    else if (keywordType.includes(word)) return <Text key = { i } style = {{ color: color.codeType }}>{word} </Text>
+                    else if (symbole.includes(word)) return <Text key = { i } style = {{ color: color.codeSymbol }}>{word} </Text>
+                    else if (word.endsWith(':')) return <Text key = { i } style = {{ color: color.codeVariable }}>{word} </Text>
+
+                    return <Text key = { i } style = {{ color: color.text }}>{word} </Text>
+                })
+            }</Text>
+        </View>
+    );
 }
 
-const CustomText = (props: any) => {
-    const text = props.text.split(' ');
-    return <Text>{text.map((text: any) => {
-      if (keyword.includes(text)) {
-        return <Text key={text} style={{ color: 'red' }}>{text} </Text>;
-      } else if (keywordSecond.includes(text)) {
-        return <Text key={text} style={{ color: 'orange' }}>{text} </Text>;
-      }
-      return `${text} `;
-    })}</Text>;
-}
+export default Code;

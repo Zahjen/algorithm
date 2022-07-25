@@ -11,6 +11,11 @@
  *      horizontal: 20,
  *      vertical: 10
  *  },
+ * 
+ *  codeBlock: {
+ *      horizontal: 20,
+ *      vertical: 15
+ *  }
  * ```
  */
  export const padding = {
@@ -39,6 +44,19 @@
     card: {
         horizontal: 20,
         vertical: 10
+    },
+
+    /**
+     * ```
+     *  codeBlock: {
+     *      horizontal: 20,
+     *      vertical: 15
+     *  }
+     * ```
+     */
+    codeBlock: {
+        horizontal: 20,
+        vertical: 15
     }
 
 }

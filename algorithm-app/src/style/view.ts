@@ -1,4 +1,6 @@
 import { StyleProp, ViewStyle } from "react-native";
+import { borderRadius } from "../variable/border-radius";
+import { color } from "../variable/color";
 import { padding } from "../variable/padding";
 
 /**
@@ -14,5 +16,15 @@ export const pageView = (): StyleProp<ViewStyle> => {
         paddingVertical: padding.view.vertical,
         paddingHorizontal: padding.view.horizontal,
         width: '100%'
+    }
+}
+
+export const codeBlockView = (): StyleProp<ViewStyle> => {
+    return {
+        paddingHorizontal: padding.codeBlock.horizontal,
+        paddingVertical: padding.codeBlock.vertical,
+        borderRadius: borderRadius.codeBlock,
+        width: '100%',
+        backgroundColor: color.codeBgColor
     }
 }
