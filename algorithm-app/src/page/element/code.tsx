@@ -2,17 +2,27 @@ import React from "react";
 import { Text, View } from "react-native";
 import { color } from "../../variable/color";
 import { codeBlockView } from "../../style/view";
+import { CodeProps } from "../../interface/props";
+/**
+ * Composant permettant de générer un block de code avec le texte fournie.
+ * 
+ * ---
+ * 
+ * `CodeProps` : Interface composée de :
+ * * `text` *(string)* : Le texte qu'il faudra tranformer pour générer un block de code.
+ * 
+ * ---
+ * 
+ * @param props `CodeProps`
+ * @returns Composant `Code`
+ */
+const Code: React.FC<CodeProps> = (props: CodeProps): JSX.Element => {
+    const keyword = ['if', 'else', 'while', 'for', 'let', 'const', 'case', 'switch', 'default'];
+    const keywordType = ['string', 'number', 'boolean', 'void', 'undefined', 'return'];
+    const symbole = ['{', '}', '[', ']', '=', '==', '===', '+', '++', '-', '--', ';', ';','*', '/', '*=', '+=', '-=', '/=', '%', '(', ')'];
 
-const keyword = ['if', 'else', 'while', 'for', 'let', 'const', 'case', 'switch', 'default'];
-const keywordType = ['string', 'number', 'boolean', 'void', 'undefined', 'return'];
-const symbole = ['{', '}', '[', ']', '=', '==', '===', '+', '++', '-', '--', ';', ';','*', '/', '*=', '+=', '-=', '/=', '%', '(', ')'];
-
-interface Props {
-    text: string
-}
-
-const Code: React.FC<Props> = (props: Props): JSX.Element => {
     const texts: string[] = props.text.split(' ');
+    
     let i: number = 0;
 
     return (

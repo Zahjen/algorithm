@@ -48,7 +48,8 @@ export const text = (colorText: string = color.text, textAlign: "center" | "auto
     return {
         color: colorText,
         fontSize: fontSizeText,
-        textAlign: textAlign
+        textAlign: textAlign,
+        fontFamily: 'PoppinsLight'
     }
 }
 

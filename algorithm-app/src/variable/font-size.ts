@@ -2,7 +2,7 @@
  * Taille de police possible dans l'application.
  * 
  * ```
- *  text: 16,
+ *  text: 14,
  *  title: 25,
  *  card: 14
  * 
@@ -13,8 +13,8 @@
  */
  export const fontSize = {
 
-    /** text: 16 */
-    text: 16,
+    /** text: 14 */
+    text: 14,
     /** title: 25 */
     title: 25,
     /** card: 14 */

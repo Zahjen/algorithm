@@ -9,7 +9,7 @@ import { text } from "../style/global";
  * ---
  * 
  * `TextProps` : Interface composée de :
- * * `text` *(string)* : Texte à associer.
+ * * `text?` *(string)* : Texte à associer.
  * * `color?` *(string)* : Couleur appliqué au texte.
  * * `fontSize?` *(number)* : Taille de police du texte.
  * * `textAlign?` *("center" | "auto" | "left" | "right" | "justify")* : L'alignement appliqué au texte.

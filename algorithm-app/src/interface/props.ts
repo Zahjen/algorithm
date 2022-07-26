@@ -67,3 +67,12 @@ export interface SpacerProps {
     /** Espace vertical appliqué entre deux éléments. */
     height?: number
 }
+
+/**
+ * Interface composée de :
+ * * `text` *(string)* : Le texte qu'il faudra tranformer pour générer un block de code.
+ */
+export interface CodeProps {
+    /** Le texte qu'il faudra tranformer pour générer un block de code. */
+    text: string
+}

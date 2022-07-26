@@ -11,7 +11,7 @@ import { color } from "../../variable/color";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RouteNavigatorParams } from "../../navigation/route-navigator";
-import Code from "../element/code";
+import SquarePermutation from "../element/square-permutation";
 
 
 /**
@@ -47,9 +47,11 @@ const HomeScreen = (): JSX.Element => {
                         return <Spacer height = { spacer.spaceBtwCard }/>
                     } }
                 />
-                <Code
-                    text = { 'const var_name: string = "un nom" ;' }
-                ></Code>
+                <SquarePermutation
+                    upperText = "0"
+                    viewTextFontSize = {18}
+                    lowerText = "1"
+                />
             </View>
         </SafeAreaView>
         
