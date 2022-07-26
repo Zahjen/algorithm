@@ -12,6 +12,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RouteNavigatorParams } from "../../navigation/route-navigator";
 import SquarePermutation from "../element/square-permutation";
+import LineSquarePermutation from "../element/line-square-permutation";
 
 
 /**
@@ -21,6 +22,35 @@ import SquarePermutation from "../element/square-permutation";
  */
 const HomeScreen = (): JSX.Element => {
     const navigation = useNavigation<NativeStackNavigationProp<RouteNavigatorParams>>();
+    const datas = [{
+        upper: "Clé",
+        view: "12",
+    }]
+
+    const datasFirst = [{
+        upper: "0",
+        view: "12",
+        lower: "3"
+    }, {
+        upper: "2",
+        view: "5",
+        lower: "1"
+    }, {
+        upper: "0",
+        view: "15",
+        lower: "3"
+    }]
+
+    const datasSecond = [{
+        upper: "5",
+        view: "3",
+        lower: "8"
+    }, {
+        upper: "9",
+        view: "36",
+        lower: "1"
+    }]
+
 
     return (
         <SafeAreaView style = {{ backgroundColor: color.bgColor, flex: 1 }}>
@@ -47,10 +77,17 @@ const HomeScreen = (): JSX.Element => {
                         return <Spacer height = { spacer.spaceBtwCard }/>
                     } }
                 />
-                <SquarePermutation
-                    upperText = "0"
-                    viewTextFontSize = {18}
-                    lowerText = "1"
+                
+                <LineSquarePermutation
+                    datasFirst = { datas }
+                    backgroundColorFirst = { color.squarePermutationPrimary }
+                />
+
+                <LineSquarePermutation
+                    datasFirst = { datasFirst }
+                    datasSecond = { datasSecond }
+                    backgroundColorFirst = { color.squarePermutationPrimary }
+                    backgroundColorSecond = { color.squarePermutationSecondary }
                 />
             </View>
         </SafeAreaView>

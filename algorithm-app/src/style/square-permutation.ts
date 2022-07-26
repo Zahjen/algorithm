@@ -1,21 +1,29 @@
+import { StyleProp, ViewStyle } from "react-native"
+import { borderRadius } from "../variable/border-radius"
+import { color } from "../variable/color"
+import { size } from "../variable/size"
+import { flex } from "./global"
+
 /**
  * Style relatif à une carte.
  * 
  * @param bgColor La couleur de fond d'une carte
- * @param flex La place prise par la vue contenant l'arc de cercle
  * @returns Le style relatif à une carte
  */
- export const card = (bgColor?: string, flex: number = 0.3) => {
+ export const squarePermutation = (bgColor?: string) => {
     return {
-        container: {
-            
-        },
         upperText: {
             
         },
-        card: {
-
-        },
+        card: [
+            {
+                width: size.squarePermutation,
+                height: size.squarePermutation,
+                backgroundColor: bgColor, 
+                borderRadius: borderRadius.squarePermutation,
+            },
+            flex("row", "center", "center")
+        ],
         viewText: {
 
         },

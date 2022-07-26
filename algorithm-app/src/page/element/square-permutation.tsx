@@ -1,8 +1,9 @@
 import React from "react";
-import { View } from "react-native";
+import { StyleProp, View, ViewStyle } from "react-native";
 import Spacer from "../../component/spacer";
 import MyText from "../../component/text";
 import { flex, widthHeight } from "../../style/global";
+import { squarePermutation } from "../../style/square-permutation";
 import { color } from "../../variable/color";
 
 interface Props {
@@ -26,7 +27,7 @@ interface Props {
 
 const SquarePermutation: React.FC<Props> = (props: Props): JSX.Element => {
     return (
-        <View style = { [flex("column", "center", "center"), { backgroundColor: 'blue' }] }>
+        <View style = { flex("column", "center", "center") }>
             {
                 (props.upperText === undefined) 
                     ? null
@@ -40,11 +41,7 @@ const SquarePermutation: React.FC<Props> = (props: Props): JSX.Element => {
                         <Spacer height = { 10 }/>
                     </View>
             }            
-            <View style = { [
-                widthHeight(40, 40), 
-                { backgroundColor: 'red', borderRadius: 5 }, 
-                flex("row", "center", "center")
-            ] }>
+            <View style = { squarePermutation(props.backgroundColor).card }>
                 <MyText
                     text = { props.viewText }
                     color = { props.viewTextColor }
@@ -67,6 +64,10 @@ const SquarePermutation: React.FC<Props> = (props: Props): JSX.Element => {
             }    
         </View>
     );
+}
+
+SquarePermutation.defaultProps = {
+    viewTextFontSize: 18
 }
 
 export default SquarePermutation;

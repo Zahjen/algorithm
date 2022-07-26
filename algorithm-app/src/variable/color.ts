@@ -32,6 +32,10 @@
     /** `codeVariable` : ![#FFE4E1](https://via.placeholder.com/15/FFE4E1/FFE4E1.png) `#FFE4E1` */
     codeVariable: '#FFE4E1',
     /** `codeBgColor` : ![#17202A](https://via.placeholder.com/15/17202A/17202A.png) `#17202A` */
-    codeBgColor: '#17202A'
+    codeBgColor: '#17202A',
+
+    squarePermutationPrimary: '#1a2433',
+    squarePermutationSecondary: '#638576',
+    squarePermutationTertiary: '#917469',
 
 }
