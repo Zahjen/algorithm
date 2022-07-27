@@ -19,6 +19,11 @@ export const pageView = (): StyleProp<ViewStyle> => {
     }
 }
 
+/**
+ * Style relatif au contenant d'un bloc de code.
+ * 
+ * @returns Style relatif au contenant d'un bloc de code
+ */
 export const codeBlockView = (): StyleProp<ViewStyle> => {
     return {
         paddingHorizontal: padding.codeBlock.horizontal,

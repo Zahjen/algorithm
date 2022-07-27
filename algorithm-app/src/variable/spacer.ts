@@ -11,6 +11,7 @@
 
     /** spaceBtwCard: 15 */
     spaceBtwCard: 15,
+
     /**
      * ```
      * spaceTitle: {
@@ -21,4 +22,5 @@
     spaceTitle: {
         bottom: 30
     }
+    
 }

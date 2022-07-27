@@ -11,6 +11,7 @@
  * ```
  */
  export const size = {
+
     /**
      * ``` 
      *  card: {
@@ -26,4 +27,5 @@
 
     /** squarePermutation: 45 */
     squarePermutation: 45
+    
 }

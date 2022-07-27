@@ -5,7 +5,7 @@
  * * `GRAPHE` : Composant permettant de générer un graphe.
  * * `CODE` : Composant permettant de générer un block de code.
  */
-export enum IComponentType {
+export enum EComponentType {
 
     TEXT,
     SQUARE_PERMUTATION,

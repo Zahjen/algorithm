@@ -11,7 +11,6 @@ import { color } from "../../variable/color";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RouteNavigatorParams } from "../../navigation/route-navigator";
-import SquarePermutation from "../element/square-permutation";
 import LineSquarePermutation from "../element/line-square-permutation";
 
 

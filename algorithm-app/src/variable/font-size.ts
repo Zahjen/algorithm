@@ -15,8 +15,10 @@
 
     /** text: 14 */
     text: 14,
+    
     /** title: 25 */
     title: 25,
+    
     /** card: 14 */
     card: 14,
 

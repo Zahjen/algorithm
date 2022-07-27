@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import { color } from "../../variable/color";
 import { codeBlockView } from "../../style/view";
 import { CodeProps } from "../../interface/props";
+
 /**
  * Composant permettant de générer un block de code avec le texte fournie.
  * 
@@ -19,7 +20,7 @@ import { CodeProps } from "../../interface/props";
 const Code: React.FC<CodeProps> = (props: CodeProps): JSX.Element => {
     const keyword = ['if', 'else', 'while', 'for', 'let', 'const', 'case', 'switch', 'default'];
     const keywordType = ['string', 'number', 'boolean', 'void', 'undefined', 'return'];
-    const symbole = ['{', '}', '[', ']', '=', '==', '===', '+', '++', '-', '--', ';', ';','*', '/', '*=', '+=', '-=', '/=', '%', '(', ')'];
+    const symbole = ['{', '}', '[', ']', '=', '==', '===', '+', '++', '-', '--', ';', ';','*', '/', '*=', '+=', '-=', '/=', '%', '(', ')', '=>', '>=', '&&', '||', '|', '<', '>', '!==', '!='];
 
     const texts: string[] = props.text.split(' ');
     
